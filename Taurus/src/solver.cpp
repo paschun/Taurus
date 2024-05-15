@@ -516,7 +516,7 @@ void graph::initPivotMDSPosition(int p){
         if(nodes[i].y>maxy) maxy = nodes[i].y;
         if(nodes[i].y<miny) miny = nodes[i].y;
     }
-    float lenth=max(maxx-minx,maxy-miny);
+    float lenth=std::max(maxx-minx,maxy-miny);
     float lenth_x=maxx-minx,lenth_y=maxy-miny;
     for(int i=0;i<nodes.size();i++){
         nodes[i].x-=minx;

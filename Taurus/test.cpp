@@ -9,18 +9,19 @@ int main(int argc, char ** argv){
     graph g;
     //2.初始化图的信息和结点的初始坐标
     //string s="price_1000.mtx";
-    cout<<"11111"<<endl;
     string filename = "bus1138.mtx";
     if (argc > 1) {
 		//strcpy(filename, argv[1]);
         filename=argv[1];
 	}
-    string pos="data/"+filename;
-    cout<<"pos===="<<pos<<endl;
+    string pos="../data/"+filename;
+    cout<<"pos="<<pos<<endl;
+
     g.initgraph(pos,1);
     g.initRandomPosition();// pmds  input position
     g.solveDij();
-   // g.initPivotMDSPosition(200);
+    g.initPivotMDSPosition(200); // in main.cpp
+    // g.initPivotMDSPosition(200); // in test.cpp
     // for(int i=0;i<g.n;i++){
     //     cout<<g.nodes[i].x<<","<<g.nodes[i].y<<endl;
     // }
@@ -41,16 +42,14 @@ int main(int argc, char ** argv){
     struct timeval start,end;
     gettimeofday(&start,NULL);
     //FMMMLayout(g);
-    // FDPLayout(g);
+    //FDPLayout(g);
     Layout(g,f);
-    
+
     //t_Layout(g,tf);
-   // FMMMLayout fmmm;
-    //fmmm.call(g);
     gettimeofday(&end,NULL);
     float time_use=(end.tv_sec-start.tv_sec)*1000000+(end.tv_usec-start.tv_usec);//微秒
     printf("time_use is %.3fs\n",time_use/1000000);
-  // FMMMLayout fmmm;
+    //FMMMLayout fmmm;
     //fmmm.call(g);
 
     //f.push_back(force(1,1,1,1));

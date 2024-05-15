@@ -1,4 +1,5 @@
 #include "PivotMDS.h"
+#include <stdexcept>
 void Dij(int V,int E,std::vector<Edge> e[MAX],int st,std::vector<float> &dist){
     std::priority_queue<std::Pair,std::vector<std::Pair>,std::greater<std::Pair>> q;
     int visited[V];
