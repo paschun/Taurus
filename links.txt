@@ -1,0 +1,5 @@
+https://github.com/ZzhiWang/Taurus-TF
+https://github.com/Ideas-Laboratory/t-fdp
+https://github.com/t-fdp/t-fdp-src
+https://ideaslab.wang/
+https://ideaslab.wang/force-directed-graph-layouts-revisited-a-new-force-based-on-the-t-distribution
